@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatriaChat - Kirim Pesan WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo-container">
+                <img src="/banner.jpg" alt="SatriaChat Logo" class="logo" onerror="this.style.display='none'">
+                <h1 class="title">SatriaChat</h1>
+                <p class="subtitle">Kirim pesan WhatsApp dengan mudah</p>
+            </div>
+
+            <form id="sendForm" class="form">
+                <div class="form-group">
+                    <label for="target">Nomor WhatsApp Tujuan</label>
+                    <input 
+                        type="text" 
+                        id="target" 
+                        name="target" 
+                        placeholder="Contoh: 6281234567890"
+                        required
+                        class="input"
+                    >
+                    <small class="helper">Masukkan nomor tanpa spasi, awali dengan kode negara (62)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Pesan</label>
+                    <textarea 
+                        id="text" 
+                        name="text" 
+                        rows="4"
+                        placeholder="Tulis pesan Anda di sini..."
+                        required
+                        class="input textarea"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    <span class="btn-text">Kirim Pesan</span>
+                    <span class="btn-loading" style="display:none;">
+                        <span class="spinner"></span> Mengirim...
+                    </span>
+                </button>
+            </form>
+
+            <div id="response" class="response" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
